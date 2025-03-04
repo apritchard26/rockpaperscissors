@@ -1,8 +1,3 @@
-
-humanScore = 0;
-computerScore = 0;
-
-
 function getComputerChoice(){
     num = Math.random();
     if(num < 0.333)
@@ -51,3 +46,19 @@ function playRound(humanChoice,computerChoice){
         console.log("Tie");
 
 }
+
+function playGame(){
+    humanScore = 0;
+    computerScore = 0;
+    
+    for(i=1;i<=5;i++){
+        humanChoice = getHumanChoice();
+        computerChoice = getComputerChoice();
+        playRound(humanChoice,computerChoice);
+    }
+    console.log("Human Score: " + humanScore);
+    console.log("Computer Score: " + computerScore);
+    
+}
+
+playGame();
